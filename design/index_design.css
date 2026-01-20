@@ -1,9 +1,13 @@
 
 /* for universal design  */
+*{
+    box-sizing: border-box;
+}
+
 .inter-font{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  width: 1600px;
+  width: 100%;
 }
 
 .display_flex{
@@ -18,7 +22,7 @@
     padding: 16px 12px 16px 12px;
     border: none;
     border-radius: 1000px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     display: flex;
     gap: 4px;
@@ -29,7 +33,7 @@
 .secondary_button{
     height: 44px;
     width: max-content;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     color: #00FF88;
     background-image: linear-gradient(#00FF88); 
@@ -51,7 +55,7 @@
 
 /* for body or main design  */
 .text_tech{
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -66,7 +70,7 @@
 }
 
 .navbar{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     display: flex;
     gap: 32px;
@@ -74,17 +78,29 @@
     text-decoration: none;
 }
 
+.hamber{
+    display: none;
+}
+
 /* for banner section  */
 #banner{
-    height: 760px;
-    background-image: url('../images/hero-bg.png')
+    height: max-content;
+    width: 100%;
+    padding-bottom: 101px;
+    background-image: url('../images/hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    
 }
 
 #new{
     width: 75px;
     height: 38px;
     padding: 8px 16px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -94,16 +110,22 @@
     border: none;
     border-radius: 1000px;
     position: relative;
-    top: 160px;
+    top: 22%;
+    left: 55%;
     box-shadow: #00ff8896 0px 0px 20px;
-    margin-left: 877px;
+    z-index: 1;
 }
 
 .banner_icon{
+    width: 21.87%;
+    height: 46.05%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 101px 625px 0 625px;
+    position: relative;
+    top: 13.28%;
+    left: 39.06%;
+
 }
 
 .microphone{
@@ -121,18 +143,124 @@
 
 .banner_text h3{
     color: #FFFFFF;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: bolder;
     margin-bottom: 8px;
 }
 
 .banner_text p{
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 24px;
 }
 
 .button_banner{
     display: flex;
     gap: 8px;
+}
+
+/* for banner lower part  */
+#banner_lower_section{
+    width: 100%;
+    height: max-content;
+    background-color: #1A0B2E;
+    
+}
+
+.banner_lower_text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0 auto;
+}
+
+.banner_lower_text h3{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: relative;
+    top: 50px;
+    bottom: 2px;
+
+}
+
+.banner_lower_text p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.banner_lower_card{
+    gap: 100px;
+    margin: 0 12.5%;
+    justify-content: center;
+    
+}
+
+.banner_card{
+   font-size: 3rem;
+   font-weight: bolder; 
+   color: #00FF88;
+   text-align: center;
+   margin-bottom: 120px;
+}
+
+.banner_card p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+
+/* for responsive  */
+@media screen and (max-width:576px){
+
+    .text_tech{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+   .navbar{
+    display: none;
+   }
+
+   .hamber{
+    display: block;
+    margin: 18px 20px 18px 396px;
+
+}
+
+   .button_hide{
+    display: none;
+   }
+
+   #new{
+    position: relative;
+    top: 20%;
+    left: 63%;
+    box-shadow: #00ff8896 0px 0px 20px;
+    z-index: 1;
+} 
+
+   .banner_icon{
+    position: relative;
+    top: 13.28%;
+    left: 39.06%;
+
+}
+
+   .banner_lower_card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,200px);
+    gap: 40px;
+    margin: 40 20px;
+    
+}
+
+  .banner_text_image{
+    margin-top: 80px;
+}
 }
