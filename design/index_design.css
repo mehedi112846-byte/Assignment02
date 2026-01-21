@@ -283,6 +283,7 @@
     fill-opacity: 40%;
     padding: 40px;
 }
+
 }
 
 .grid_container h6{
@@ -326,6 +327,8 @@
     border: none;
     border-radius: 1rem;
 }
+
+
 
 .m_lower_card h6{
     font-size: 1.5rem;
@@ -375,6 +378,7 @@
     justify-content: center;
     align-items: center;
 }
+
 
 .host_image{
     position: relative;
@@ -439,6 +443,72 @@
 
 }
 
+/* for hover effect  */
+.button_hide:hover{
+    transform: translate(2px,-2px);
+}
+
+.spotify:hover{
+    transform: translate(2px,-2px);
+}
+
+.Subscribe:hover{
+    transform: translate(2px,-2px);
+}
+
+#new:hover{
+    transform: translate(2px,-2px);
+}
+
+.banner_icon:hover{
+    transform: translate(2px,-2px);
+}
+
+.host:hover{
+    transform: translate(2px,-2px);
+}
+
+.m_lower_card:hover{
+    transform: translate(2px, -2px);
+}
+
+.grid_card1:hover{
+    transform: translate(2px,-2px);
+}
+
+.grid_card2:hover{
+    transform: translate(2px,-2px);
+}
+
+.grid_card3:hover{
+    transform: translate(2px,-2px);
+}
+
+.grid_card4:hover{
+    transform: translate(2px,-2px);
+}
+
+.grid_card5:hover{
+    transform: translate(2px,-2px);
+}
+
+
+/* for animation  */
+@keyframes microphone{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.spin{
+    animation-name: microphone;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
 
 
 
